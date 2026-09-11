@@ -1,14 +1,19 @@
 const express = require('express');
-const cors= require('cors');
-const userRoutes = require('./routes/userRoutes');
+const cors = require('cors');
+const routes = require('./routes'); // O la ruta a tu archivo de rutas
 
 const app = express();
 
-app.use(cors());
+// 1. Configurar CORS para permitir peticiones desde cualquier origen (incluyendo archivos locales)
+app.use(cors({
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 app.use(express.json());
-app.use('/api', userRoutes);
 
-
+// 2. Rutas
+app.use('/api', routes);
 
 module.exports = app;
