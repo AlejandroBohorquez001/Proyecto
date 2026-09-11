@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Consumir API Vercel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>Gestión de Datos</h1>
+
+    <!-- GET -->
+    <button id="btn-get" onclick="obtenerDatos()">Obtener Datos</button>
+
+    <p id="resul">Este es el resultado</p>
+
+
+
+    <!-- POST -->
+    <h3>Crear Registro</h3>
+    <input type="text" id="post-name" placeholder="Nombre">
+    <input type="text" id="post-email" placeholder="Email">
+    <button id="btn-post" onclick="crearRegistro()">Enviar (POST)</button>
+
+    <!-- PUT -->
+    <h3>Actualizar Registro</h3>
+    <input type="text" id="put-id" placeholder="ID">
+    <input type="text" id="put-name" placeholder="Nuevo Nombre">
+    <input type="text" id="put-email" placeholder="Nuevo email">
+    <button id="btn-put" onclick="actualizarRegistro()">Actualizar (PUT)</button>
+
+    <!-- Consola/Resultado -->
+
+    
+</body>
+</html>
